@@ -2,38 +2,44 @@
 <html>
     <head>  
         <meta charset="utf-8" />
-        <title> Math Fraction - Educa Apurímac </title>
+        <title> Fractions </title>
         <script type="text/javascript" src="js/phaser.min.js"></script>
         <script type="text/javascript" src="js/boot.js"></script>
-        <script type="text/javascript" src="js/load.js"></script>
-        <script type="text/javascript" src="js/welcome.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
-        <script type="text/javascript" src="js/uno.js"></script>
-        <script type="text/javascript" src="js/dos.js"></script>
+        <script type="text/javascript" src="js/circleOne.js"></script>
     </head>
 
     <body>
-
+        <center>
+            <div id="fractions-game" style="padding: 0 auto 0 auto;"></div>
+        </center>
     </body>  
+    
     <script type="text/javascript">
-        // Initialize the game and start our state
-        var game = new Phaser.Game(900, 600);
+        // Initialize the game
+        var game = new Phaser.Game(900, 600, Phaser.CANVAS, 'fractions-game');
+        
+        //global parameters
         game.global = {
-         unopos : 0,
-         unomov : false,
-         dospos : 0,
-         dosmov : false
+         lang : "",
+            // Game One 
+         onePosition : 0, //Map position
+         oneMove : false, //Move to next position
+         oneDifficulty : 0, //From one to five 
+         oneOperator: "", //Plus, Minus, Mixed
+         showLabel: false, //Show block label
+         oneShape : "" //Circle, square
+         
         }
+        //adding game states (scenes)
         game.state.add('boot', bootState);  
-        game.state.add('load', loadState);  
-        game.state.add('welcome', welcomeState);  
+        game.state.add('load', loadState);
         game.state.add('menu', menuState);   
-        game.state.add('uno', mapaUno);   
-        game.state.add('unouno', unoUno);  
-        game.state.add('unofinal', unoFinal);  
-        game.state.add('dos', mapaDos);   
-        game.state.add('unodos', unoDos);  
-        game.state.add('dosfinal', dosFinal);  
+        game.state.add('menuCOne', menuCircleOne);
+        game.state.add('mapCOne', mapCircleOne);
+        game.state.add('gameCOne', gameCircleOne);
+        game.state.add('endCOne', endCircleOne);
+        //starting to boot game
         game.state.start('boot');
     </script>
 </html>
