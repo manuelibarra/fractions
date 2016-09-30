@@ -1,10 +1,10 @@
 {
-    "loading":"CARREGANDO",
-    "title":"Fracções",
-    "menu_title":"ESCOLHA UM JOGO",
+    "loading":"CARREGAMENTO",
+    "title":"Frações",
+    "menu_title":"SELECCIONE UM JOGO",
     "difficulty": "Dificuldade",
-    "level": "Nível",
-    "game_menu_title": "SELECCIONAR A OPERAÇÃO E DIFICULDADE",
-    "good_job": "Bem feito",
-    "retry": "Tenta de novo"
+    "level": "Nivel",
+    "game_menu_title": "SELEÇÃO DE OPERAÇÃO E DIFICULDADE",
+    "good_job": "Bom trabalho",
+    "retry": "Tente novamente"
 }

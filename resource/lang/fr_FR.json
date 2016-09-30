@@ -1,0 +1,10 @@
+{
+    "loading":"CHARGEMENT",
+    "title":"Fractions",
+    "menu_title":"GAME SELECT",
+    "difficulty": "Difficulté",
+    "level": "Niveau",
+    "game_menu_title": "OPERATION SELECT ET DIFFICULTÉ",
+    "good_job": "Bon travail",
+    "retry": "Réessayer"
+}
